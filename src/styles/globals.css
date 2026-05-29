@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, -apple-system, sans-serif;
+
+  /* ── GoChinaPass Travel Palette (Bright & Vibrant) ── */
+  --color-background: #ffffff;
+  --color-foreground: #1a1a2e;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a2e;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a1a2e;
+
+  /* Primary: vibrant coral (CTAs, accents) */
+  --color-primary: #ff6b4a;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary: bright teal */
+  --color-secondary: #00b4d8;
+  --color-secondary-foreground: #ffffff;
+
+  /* Muted: light warm gray */
+  --color-muted: #f8f9fa;
+  --color-muted-foreground: #6c757d;
+
+  /* Accent: deep navy */
+  --color-accent: #0f172a;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+
+  /* Travel accent colors */
+  --color-warm: #ffb347;
+  --color-warm-foreground: #1a1a2e;
+  --color-sky: #48cae4;
+  --color-sky-foreground: #1a1a2e;
+  --color-rose: #ff6b6b;
+  --color-rose-foreground: #ffffff;
+  --color-lime: #51cf66;
+  --color-lime-foreground: #1a1a2e;
+
+  /* Border / ring */
+  --color-border: rgba(26, 26, 46, 0.08);
+  --color-input: rgba(26, 26, 46, 0.05);
+  --color-ring: #ff6b4a;
+
+  --radius: 0.75rem;
+  --radius-button: 9999px;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  /* Better Chinese text rendering */
+  :lang(zh), .chinese, [class*="font-chinese"] {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+    font-weight: 450;
+    letter-spacing: 0.02em;
+  }
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
