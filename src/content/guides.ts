@@ -15,6 +15,7 @@ export interface GuideContent {
   sections: {
     title: string;
     content: string;
+    imageUrl?: string;
     videoUrl?: string;
   }[];
   tips: string[];
@@ -48,6 +49,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "Why China is Cashless",
         content: "China runs on mobile payments. Even street vendors, subway ticket machines, and small restaurants use QR code payments. As a foreigner, you can absolutely use these systems — you just need to set them up before you go.",
+        imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
       },
       {
         title: "Using Alipay as a Foreigner",
@@ -85,7 +87,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Transport Guide",
     subtitle: "Trains, subway, ride-hailing, and getting around China",
     desc: "China's transport system is world-class. Here's how to navigate it as a first-time visitor.",
-    heroImage: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&h=400&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1646142884946-bc7da14dcb5f?w=800&h=400&fit=crop&auto=format",
     lastUpdated: "May 2025",
     sources: [
       { label: "Trip.com Train Booking (English)", url: "https://www.trip.com/trains/" },
@@ -101,6 +103,7 @@ export const guides: Record<string, GuideContent> = {
         title: "High-Speed Trains",
         content: "China's high-speed rail network is the largest in the world and the best way to travel between cities. Trains are clean, punctual, and comfortable. You can book tickets through Trip.com (English interface, accepts international cards) or at the station. Second class seats are perfectly comfortable and the most affordable option. Key routes: Beijing to Shanghai (4.5 hours, ¥550), Beijing to Xi'an (4.5 hours, ¥520), Shanghai to Guilin (8 hours, ¥600). Arrive at the station 30-45 minutes early to allow for security checks.",
         videoUrl: "https://www.youtube.com/embed/hMtfUKaI6LI",
+        imageUrl: "https://images.unsplash.com/photo-1646142884946-bc7da14dcb5f?w=600&q=80",
       },
       {
         title: "Subway Systems",
@@ -153,6 +156,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "What's Blocked in China?",
         content: "The Great Firewall of China blocks a significant portion of the internet. Common blocked services include Google (all services), Gmail, WhatsApp, Instagram, Facebook, Twitter/X, YouTube, Netflix, Spotify, and many news websites (BBC, New York Times). Services that work without VPN: Bing, Apple iMessage/Facetime (limited), LinkedIn (partially), and most Chinese apps like WeChat and Alipay.",
+        imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80",
       },
       {
         title: "Best VPNs for China in 2025",
@@ -205,6 +209,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "WeChat — The Everything App",
         content: "WeChat is not just messaging — it's an entire operating system for daily life in China. You'll use it to chat, pay (WeChat Pay), read news, order food, book services, and more. Almost every business in China has a WeChat account. Download the app, register with your phone number, and set up WeChat Pay by linking your international card. Pro tip: set up WeChat Pay before you go if possible.",
+        imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
       },
       {
         title: "Alipay — Payments & More",
@@ -256,6 +261,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "The Most Important Phrase",
         content: "A friendly '谢谢' (xiè xiè — sheh-sheh) goes a long way in China. Unlike some cultures, Chinese people appreciate any attempt to speak their language. Even mispronounced words are met with smiles and encouragement. Start with '你好' (nǐ hǎo — nee how) for hello and '再见' (zài jiàn — zye jyen) for goodbye.",
+        imageUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=600&q=80",
       },
       {
         title: "Essential Travel Phrases",
@@ -303,6 +309,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "China Travel Visa",
         content: "Most nationalities need a visa to enter China. The most common is the L (Tourist) visa, valid for 30 days single or double entry. Apply at your nearest Chinese embassy or visa center at least 2-4 weeks before travel. Some cities offer 144-hour transit visa-free access — check if your itinerary qualifies. Requirements typically include: passport valid for 6+ months, completed application, hotel bookings, flight itinerary, and a recent photo. The process is straightforward but requires paperwork.",
+        imageUrl: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=600&q=80",
       },
       {
         title: "Travel Insurance",

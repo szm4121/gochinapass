@@ -61,6 +61,9 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                 {guide.sections.map((section, i) => (
                   <div key={i}>
                     <h2 className="text-xl font-bold text-foreground mb-3">{section.title}</h2>
+                    {section.imageUrl && (
+                      <img src={section.imageUrl} alt={section.title} className="w-full rounded-xl mb-4 object-cover h-48" />
+                    )}
                     <p className="text-sm text-muted-foreground/80 leading-relaxed">{section.content}</p>
                     {section.videoUrl && (
                       <div className="mt-4 relative aspect-video rounded-xl overflow-hidden bg-muted">
