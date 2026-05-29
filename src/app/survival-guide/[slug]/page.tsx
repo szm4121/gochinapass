@@ -62,24 +62,21 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                   <div key={i}>
                     <h2 className="text-xl font-bold text-foreground mb-3">{section.title}</h2>
                     <p className="text-sm text-muted-foreground/80 leading-relaxed">{section.content}</p>
+                    {section.videoUrl && (
+                      <div className="mt-4 relative aspect-video rounded-xl overflow-hidden bg-muted">
+                        <iframe
+                          src={section.videoUrl}
+                          title={section.title}
+                          className="absolute inset-0 w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    )}
                   </div>
                 ))}
 
-                {/* Video embed */}
-                {guide.videoUrl && (
-                  <div>
-                    <h2 className="text-xl font-bold text-foreground mb-3">Video Guide</h2>
-                    <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
-                      <iframe
-                        src={guide.videoUrl}
-                        title="Video guide"
-                        className="absolute inset-0 w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
-                )}
+                {/* Videos are embedded inline within sections */}
               </div>
 
               {/* Sidebar */}
@@ -99,6 +96,30 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                     ))}
                   </ul>
                 </div>
+
+                {/* App Download Links */}
+                {guide.appLinks && guide.appLinks.length > 0 && (
+                  <div className="p-5 rounded-xl bg-white border border-border/60">
+                    <h3 className="text-sm font-semibold text-foreground mb-3">Download the App</h3>
+                    <div className="space-y-2">
+                      {guide.appLinks.map((app, i) => (
+                        <div key={i} className="space-y-2">
+                          <p className="text-xs text-muted-foreground/70">{app.name}</p>
+                          <div className="flex gap-2">
+                            <a href={app.ios} target="_blank" rel="noopener noreferrer"
+                              className="flex-1 px-3 py-2 bg-accent text-white rounded-lg text-xs font-medium text-center hover:opacity-90 transition-all">
+                              App Store
+                            </a>
+                            <a href={app.android} target="_blank" rel="noopener noreferrer"
+                              className="flex-1 px-3 py-2 bg-accent text-white rounded-lg text-xs font-medium text-center hover:opacity-90 transition-all">
+                              Google Play
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Sources */}
                 <div className="p-5 rounded-xl bg-white border border-border/60">

@@ -4,7 +4,7 @@ export interface GuideContent {
   subtitle: string;
   desc: string;
   heroImage: string;
-  videoUrl?: string;
+  appLinks?: { name: string; ios: string; android: string }[];
   lastUpdated: string;
   sources: { label: string; url: string }[];
   seo: {
@@ -15,6 +15,7 @@ export interface GuideContent {
   sections: {
     title: string;
     content: string;
+    videoUrl?: string;
   }[];
   tips: string[];
   affiliate?: {
@@ -30,7 +31,9 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to use Alipay, WeChat Pay, and foreign cards in China",
     desc: "China is almost cashless. Here's how to pay for everything as a foreign tourist.",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&auto=format",
-    videoUrl: "https://www.youtube.com/embed/dleZ1EaHgog",
+    appLinks: [
+      { name: "Alipay", ios: "https://apps.apple.com/app/alipay/id333206289", android: "https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone" },
+    ],
     lastUpdated: "May 2025",
     sources: [
       { label: "Alipay International (English)", url: "https://intl.alipay.com" },
@@ -49,6 +52,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "Using Alipay as a Foreigner",
         content: "Alipay is the most foreigner-friendly payment app in China. Download the app from your app store, register with your email or phone number, and link your international Visa or Mastercard. Once set up, you can scan any Alipay QR code to pay instantly. The exchange rate is competitive and there are no additional fees for most transactions. You can also use Alipay to book Didi rides, buy train tickets through the mini-program, and even order food.",
+        videoUrl: "https://www.youtube.com/embed/dleZ1EaHgog",
       },
       {
         title: "Setting Up WeChat Pay",
@@ -82,7 +86,6 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Trains, subway, ride-hailing, and getting around China",
     desc: "China's transport system is world-class. Here's how to navigate it as a first-time visitor.",
     heroImage: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&h=400&fit=crop&auto=format",
-    videoUrl: "https://www.youtube.com/embed/hMtfUKaI6LI",
     lastUpdated: "May 2025",
     sources: [
       { label: "Trip.com Train Booking (English)", url: "https://www.trip.com/trains/" },
@@ -97,6 +100,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "High-Speed Trains",
         content: "China's high-speed rail network is the largest in the world and the best way to travel between cities. Trains are clean, punctual, and comfortable. You can book tickets through Trip.com (English interface, accepts international cards) or at the station. Second class seats are perfectly comfortable and the most affordable option. Key routes: Beijing to Shanghai (4.5 hours, ¥550), Beijing to Xi'an (4.5 hours, ¥520), Shanghai to Guilin (8 hours, ¥600). Arrive at the station 30-45 minutes early to allow for security checks.",
+        videoUrl: "https://www.youtube.com/embed/hMtfUKaI6LI",
       },
       {
         title: "Subway Systems",
@@ -105,6 +109,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "Didi (Chinese Uber)",
         content: "Didi is China's ride-hailing app and it works just like Uber. Download the Didi app (it has an English version), register with your phone number, and add your international credit card. Enter your destination in Chinese for best results. Fares are very affordable — a 15-minute ride costs around ¥15-30 ($2-5). During peak hours or in bad weather, surge pricing applies. Didi is generally safer and more reliable than hailing a regular taxi.",
+        videoUrl: "https://www.youtube.com/embed/YhRXfxrcAX0",
       },
       {
         title: "Domestic Flights",
@@ -134,7 +139,6 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to access Google, WhatsApp, Instagram and more in China",
     desc: "The Great Firewall blocks many Western websites. Here's how to stay connected.",
     heroImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop&auto=format",
-    videoUrl: "https://www.youtube.com/embed/vM4-l2fuJYI",
     lastUpdated: "May 2025",
     sources: [
       { label: "NordVPN (English)", url: "https://nordvpn.com/feature/china/" },
@@ -165,6 +169,7 @@ export const guides: Record<string, GuideContent> = {
       {
         title: "eSIM vs Physical SIM",
         content: "For internet access, an eSIM is the most convenient option for most travelers. Airalo and Holafly offer China-specific eSIM plans that activate immediately upon arrival. No need to find a physical SIM card shop. An eSIM gives you your own data connection, which is more reliable than WiFi for VPN connections. If your phone doesn't support eSIM, you can buy a physical SIM card at the airport or at China Mobile/China Unicom shops.",
+        videoUrl: "https://www.youtube.com/embed/vM4-l2fuJYI",
       },
     ],
     tips: [
