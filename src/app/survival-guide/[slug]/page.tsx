@@ -64,6 +64,22 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                     <p className="text-sm text-muted-foreground/80 leading-relaxed">{section.content}</p>
                   </div>
                 ))}
+
+                {/* Video embed */}
+                {guide.videoUrl && (
+                  <div>
+                    <h2 className="text-xl font-bold text-foreground mb-3">Video Guide</h2>
+                    <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
+                      <iframe
+                        src={guide.videoUrl}
+                        title="Video guide"
+                        className="absolute inset-0 w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Sidebar */}

@@ -4,6 +4,7 @@ export interface GuideContent {
   subtitle: string;
   desc: string;
   heroImage: string;
+  videoUrl?: string;
   lastUpdated: string;
   sources: { label: string; url: string }[];
   seo: {
@@ -29,10 +30,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to use Alipay, WeChat Pay, and foreign cards in China",
     desc: "China is almost cashless. Here's how to pay for everything as a foreign tourist.",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&auto=format",
+    videoUrl: "https://www.youtube.com/embed/dleZ1EaHgog",
     lastUpdated: "May 2025",
     sources: [
-      { label: "Alipay Official Help Center", url: "https://help.alipay.com" },
-      { label: "Alipay International Users Guide", url: "https://www.alipay.com/global" },
+      { label: "Alipay International (English)", url: "https://intl.alipay.com" },
+      { label: "Alipay Help Center (English)", url: "https://help.alipay.com/lab/help_detail.htm?help_id=599858" },
     ],
     seo: {
       title: "How to Use Alipay in China 2025 | Foreign Tourist Payment Guide",
@@ -80,10 +82,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Trains, subway, ride-hailing, and getting around China",
     desc: "China's transport system is world-class. Here's how to navigate it as a first-time visitor.",
     heroImage: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&h=400&fit=crop&auto=format",
+    videoUrl: "https://www.youtube.com/embed/hMtfUKaI6LI",
     lastUpdated: "May 2025",
     sources: [
-      { label: "Trip.com Train Booking", url: "https://www.trip.com/trains/" },
-      { label: "China Railway Official (12306)", url: "https://www.12306.cn/en/" },
+      { label: "Trip.com Train Booking (English)", url: "https://www.trip.com/trains/" },
+      { label: "China Railway 12306 English", url: "https://www.12306.cn/en/index.html" },
     ],
     seo: {
       title: "China Transport Guide 2025 | High-Speed Trains, Subway & Didi",
@@ -131,9 +134,10 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to access Google, WhatsApp, Instagram and more in China",
     desc: "The Great Firewall blocks many Western websites. Here's how to stay connected.",
     heroImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop&auto=format",
+    videoUrl: "https://www.youtube.com/embed/vM4-l2fuJYI",
     lastUpdated: "May 2025",
     sources: [
-      { label: "NordVPN China Guide", url: "https://nordvpn.com/zh/feature/china/" },
+      { label: "NordVPN (English)", url: "https://nordvpn.com/feature/china/" },
       { label: "ExpressVPN China Guide", url: "https://www.expressvpn.com/china" },
     ],
     seo: {
@@ -184,8 +188,8 @@ export const guides: Record<string, GuideContent> = {
     heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop&auto=format",
     lastUpdated: "May 2025",
     sources: [
-      { label: "WeChat Official Site", url: "https://www.wechat.com" },
-      { label: "Alipay Official Site", url: "https://www.alipay.com" },
+      { label: "WeChat Official (English)", url: "https://www.wechat.com" },
+      { label: "Didi English Version", url: "https://www.didiglobal.com" },
     ],
     seo: {
       title: "Best Apps for China Travel 2025 | Essential Mobile Apps",
@@ -235,8 +239,8 @@ export const guides: Record<string, GuideContent> = {
     heroImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&h=400&fit=crop&auto=format",
     lastUpdated: "May 2025",
     sources: [
-      { label: "Pleco Dictionary App", url: "https://www.pleco.com" },
-      { label: "Google Translate Help", url: "https://support.google.com/translate" },
+      { label: "Pleco Dictionary (English)", url: "https://www.pleco.com" },
+      { label: "Google Translate (English)", url: "https://translate.google.com" },
     ],
     seo: {
       title: "Basic Chinese Phrases for Travelers | China Language Guide",
@@ -282,8 +286,8 @@ export const guides: Record<string, GuideContent> = {
     heroImage: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=800&h=400&fit=crop&auto=format",
     lastUpdated: "May 2025",
     sources: [
-      { label: "China Visa Service Center", url: "https://www.visaforchina.org" },
-      { label: "World Nomads Insurance", url: "https://www.worldnomads.com" },
+      { label: "China Visa Service (English)", url: "https://www.visaforchina.org" },
+      { label: "SafetyWing Travel Insurance", url: "https://safetywing.com" },
     ],
     seo: {
       title: "China Travel Safety Guide 2025 | Visas, Insurance & Emergency Info",
