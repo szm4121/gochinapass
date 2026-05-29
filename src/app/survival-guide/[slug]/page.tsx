@@ -84,6 +84,20 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                   </ul>
                 </div>
 
+                {/* Sources */}
+                <div className="p-5 rounded-xl bg-white border border-border/60">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Sources</h3>
+                  <p className="text-xs text-muted-foreground/60 mb-3">Last updated: {guide.lastUpdated}</p>
+                  <div className="space-y-2">
+                    {guide.sources.map((s, i) => (
+                      <a key={i} href={s.url} target="_blank" rel="noopener noreferrer"
+                        className="block text-xs text-primary hover:underline">
+                        {s.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
                 {/* Affiliate */}
                 {guide.affiliate && (
                   <div className="p-5 rounded-xl bg-white border border-border/60">

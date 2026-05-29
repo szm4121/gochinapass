@@ -4,6 +4,8 @@ export interface GuideContent {
   subtitle: string;
   desc: string;
   heroImage: string;
+  lastUpdated: string;
+  sources: { label: string; url: string }[];
   seo: {
     title: string;
     description: string;
@@ -27,6 +29,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to use Alipay, WeChat Pay, and foreign cards in China",
     desc: "China is almost cashless. Here's how to pay for everything as a foreign tourist.",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "Alipay Official Help Center", url: "https://help.alipay.com" },
+      { label: "Alipay International Users Guide", url: "https://www.alipay.com/global" },
+    ],
     seo: {
       title: "How to Use Alipay in China 2025 | Foreign Tourist Payment Guide",
       description: "Complete guide to using Alipay and WeChat Pay as a foreign tourist in China. Link your international credit card, set up payments, and pay like a local.",
@@ -73,6 +80,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Trains, subway, ride-hailing, and getting around China",
     desc: "China's transport system is world-class. Here's how to navigate it as a first-time visitor.",
     heroImage: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "Trip.com Train Booking", url: "https://www.trip.com/trains/" },
+      { label: "China Railway Official (12306)", url: "https://www.12306.cn/en/" },
+    ],
     seo: {
       title: "China Transport Guide 2025 | High-Speed Trains, Subway & Didi",
       description: "Complete guide to China's transport system for foreign tourists. How to book high-speed trains, use the subway, take Didi, and navigate like a local.",
@@ -119,6 +131,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "How to access Google, WhatsApp, Instagram and more in China",
     desc: "The Great Firewall blocks many Western websites. Here's how to stay connected.",
     heroImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "NordVPN China Guide", url: "https://nordvpn.com/zh/feature/china/" },
+      { label: "ExpressVPN China Guide", url: "https://www.expressvpn.com/china" },
+    ],
     seo: {
       title: "Best VPN for China 2025 | How to Access Google & WhatsApp",
       description: "The best VPNs that still work in China in 2025. Step-by-step guide to set up a VPN before your trip, access Google, WhatsApp, Instagram, and more.",
@@ -165,6 +182,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Must-have apps for navigating, translating, and surviving China",
     desc: "The apps every foreign tourist needs for a smooth China trip.",
     heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "WeChat Official Site", url: "https://www.wechat.com" },
+      { label: "Alipay Official Site", url: "https://www.alipay.com" },
+    ],
     seo: {
       title: "Best Apps for China Travel 2025 | Essential Mobile Apps",
       description: "The essential apps for traveling in China — navigation, translation, messaging, ride-hailing, and more. What to download before your trip.",
@@ -211,6 +233,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Basic Chinese phrases and communication tools for travelers",
     desc: "You don't need to learn Chinese, but these phrases will make your trip much easier.",
     heroImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "Pleco Dictionary App", url: "https://www.pleco.com" },
+      { label: "Google Translate Help", url: "https://support.google.com/translate" },
+    ],
     seo: {
       title: "Basic Chinese Phrases for Travelers | China Language Guide",
       description: "Essential Chinese phrases for tourists visiting China. Learn key words for transportation, dining, shopping, and emergencies. Plus the best translation tools.",
@@ -253,6 +280,11 @@ export const guides: Record<string, GuideContent> = {
     subtitle: "Visa requirements, insurance, emergency contacts, and staying safe",
     desc: "China is one of the safest travel destinations. Here's what you need to know.",
     heroImage: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=800&h=400&fit=crop&auto=format",
+    lastUpdated: "May 2025",
+    sources: [
+      { label: "China Visa Service Center", url: "https://www.visaforchina.org" },
+      { label: "World Nomads Insurance", url: "https://www.worldnomads.com" },
+    ],
     seo: {
       title: "China Travel Safety Guide 2025 | Visas, Insurance & Emergency Info",
       description: "Complete safety guide for traveling in China. Visa requirements, travel insurance, emergency contacts, health tips, and staying safe as a foreign tourist.",
