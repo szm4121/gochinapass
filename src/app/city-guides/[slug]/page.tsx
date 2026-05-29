@@ -44,6 +44,15 @@ const badgeColors: Record<string, string> = {
   guilin: "bg-sky/10 text-sky",
 };
 
+const cityPhotos: Record<string, string> = {
+  beijing: "/beijing.jpg",
+  shanghai: "/shanghai.jpg",
+  chengdu: "/chengdu.jpg",
+  xian: "/xian.jpg",
+  guangzhou: "/shanghai.jpg",
+  guilin: "/guilin.jpg",
+};
+
 export default function CityGuidePage({ params }: { params: { slug: string } }) {
   const city = cities[params.slug];
   if (!city) notFound();
@@ -56,19 +65,22 @@ export default function CityGuidePage({ params }: { params: { slug: string } }) 
       <Header />
       <main className="min-h-[calc(100vh-4rem)]">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#fff5f0] via-white to-[#f0faff] py-16 md:py-20">
-          <div className="absolute top-10 right-20 text-6xl opacity-[0.06]">{city.emoji}</div>
+        <section className="relative overflow-hidden py-16 md:py-20">
+          <div className="absolute inset-0">
+            <img src={cityPhotos[city.slug] || cityPhotos.beijing} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "saturate(0.8)" }} />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
           <div className="max-w-[1000px] mx-auto px-6 relative">
             <span className="text-5xl block mb-4">{city.emoji}</span>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-3">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
               {city.name} Travel Guide
             </h1>
-            <p className="text-base text-muted-foreground/60 mb-1">{city.subtitle}</p>
-            <p className="text-base text-muted-foreground/70 flex items-center gap-1.5 mb-4">
-              <MapPin className="w-4 h-4 text-primary" />
+            <p className="text-base text-white/60 mb-1">{city.subtitle}</p>
+            <p className="text-base text-white/70 flex items-center gap-1.5 mb-4">
+              <MapPin className="w-4 h-4 text-white/70" />
               China &middot; Updated 2025 &middot; <Star className="w-3.5 h-3.5 fill-warm text-warm" /> {city.rating}
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed mb-6">
+            <p className="text-lg text-white/70 max-w-2xl leading-relaxed mb-6">
               {city.desc}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -78,7 +90,7 @@ export default function CityGuidePage({ params }: { params: { slug: string } }) 
                 AI Plan {city.name} Trip
               </Link>
               <Link href={`/deals`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-border/60 rounded-full text-sm font-medium hover:border-primary/30 hover:text-primary transition-all">
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-white hover:bg-white/25 transition-all">
                 <Wifi className="w-4 h-4" />
                 eSIM & VPN Deals
               </Link>

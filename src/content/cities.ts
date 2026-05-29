@@ -34,7 +34,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.8",
     emoji: "🏛️",
     color: "from-[#ff6b4a]/20 to-[#ffb347]/10",
-    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Beijing Travel Guide 2025 | Great Wall, Forbidden City & More",
       description: "Complete Beijing travel guide for foreign tourists. Great Wall tours, Forbidden City tickets, best hotels, local food, and AI-powered itinerary planning.",
@@ -86,7 +86,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.7",
     emoji: "🌃",
     color: "from-[#48cae4]/20 to-[#00b4d8]/10",
-    heroImage: "https://images.unsplash.com/photo-1537531383492-f81478b1d7a8?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Shanghai Travel Guide 2025 | Bund, Disneyland & Local Tips",
       description: "Plan your Shanghai trip with our complete guide. Best attractions, hotel deals, food recommendations, and AI-generated itineraries.",
@@ -137,7 +137,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.6",
     emoji: "🐼",
     color: "from-[#51cf66]/20 to-[#48cae4]/10",
-    heroImage: "https://images.unsplash.com/photo-1590736969955-71cc94901146?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1562832135-14a35d25edef?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Chengdu Travel Guide | Pandas, Hot Pot & Sichuan Adventures",
       description: "Plan your Chengdu trip — panda base tickets, best hot pot restaurants, Sichuan Opera, and AI itinerary planner.",
@@ -188,7 +188,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.7",
     emoji: "🏺",
     color: "from-[#ffb347]/20 to-[#ff6b4a]/10",
-    heroImage: "https://images.unsplash.com/photo-1590419684242-09ba3f5d8d8e?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Xi'an Travel Guide | Terracotta Warriors & Ancient China",
       description: "Complete Xi'an travel guide — Terracotta Army tickets, city wall bike rental, Muslim Quarter food, and AI itineraries.",
@@ -239,7 +239,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.4",
     emoji: "🥟",
     color: "from-[#ff6b6b]/20 to-[#ffb347]/10",
-    heroImage: "https://images.unsplash.com/photo-1537531383492-f81478b1d7a8?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Guangzhou Travel Guide | Dim Sum, Canton Tower & Pearl River",
       description: "Plan your Guangzhou trip — best dim sum restaurants, Canton Tower tickets, Shamian Island walking tour, and AI itinerary.",
@@ -290,7 +290,7 @@ export const cities: Record<string, CityContent> = {
     rating: "4.5",
     emoji: "🏔️",
     color: "from-[#00b4d8]/20 to-[#51cf66]/10",
-    heroImage: "https://images.unsplash.com/photo-1529921876812-e58150e4f0b6?w=1200&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&h=800&fit=crop&auto=format",
     seo: {
       title: "Guilin Travel Guide | Li River Cruise, Yangshuo & Rice Terraces",
       description: "Plan your Guilin trip — Li River cruise, Yangshuo adventures, Longji Rice Terraces, and AI itinerary planner.",

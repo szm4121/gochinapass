@@ -317,6 +317,11 @@ function TripView({ data }: { data: any }) {
   const i = content.indexOf("===JSON===");
   const display = i === -1 ? content : content.slice(0, i).trim();
   
+  // Content only in JSON, nothing to render as markdown
+  if (!display && done) {
+    return <div className="text-xs text-muted-foreground/40 text-center py-4">Itinerary loaded in card view above</div>;
+  }
+  
   // Loading state (no content yet)
   if (!display && !done) {
     return (
@@ -383,9 +388,7 @@ export default function PlannerContent() {
   const [showSuggestions, setShowSuggestions] = useState(!initialQ);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  // Auto-scroll disabled — user controls scrolling manually
 
   // Auto-start from URL param
   useEffect(() => {
@@ -412,16 +415,24 @@ export default function PlannerContent() {
 
         const reader = res.body.getReader();
         const dec = new TextDecoder();
+        let lineRemainder = "";
 
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
           const chunk = dec.decode(value, {stream: true});
-          for (const line of chunk.split("\n")) {
-            if (!line || !line.startsWith("0:")) continue;
+          // Append to remainder and split into complete lines
+          const lines = (lineRemainder + chunk).split("\n");
+          lineRemainder = lines.pop() || "";
+          for (const line of lines) {
+            if (!line.startsWith("0:")) continue;
             buf += JSON.parse(line.slice(2));
           }
           if (buf.length > 10) upd();
+        }
+        // Process final partial line
+        if (lineRemainder.startsWith("0:")) {
+          buf += JSON.parse(lineRemainder.slice(2));
         }
 
         const jd = extractJSON(buf);
@@ -453,18 +464,24 @@ export default function PlannerContent() {
 
       const reader = res.body.getReader();
       const dec = new TextDecoder();
-      let updateCounter = 0;
+      let lineRemainder = "";
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
         const chunk = dec.decode(value, {stream: true});
-        for (const line of chunk.split("\n")) {
-          if (!line || !line.startsWith("0:")) continue;
+        // Append to remainder and split into complete lines
+        const lines = (lineRemainder + chunk).split("\n");
+        lineRemainder = lines.pop() || "";
+        for (const line of lines) {
+          if (!line.startsWith("0:")) continue;
           buf += JSON.parse(line.slice(2));
-          updateCounter++;
         }
-        if (updateCounter % 2 === 0 || chunk.length > 50) upd();
+        upd();
+      }
+      // Process final partial line
+      if (lineRemainder.startsWith("0:")) {
+        buf += JSON.parse(lineRemainder.slice(2));
       }
 
       const jd = extractJSON(buf);

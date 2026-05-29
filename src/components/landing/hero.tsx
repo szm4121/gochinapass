@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Sparkles, Map } from "lucide-react";
+import { DestinationCarousel } from "./destination-carousel";
 
 export function Hero() {
   const [input, setInput] = useState("");
@@ -14,11 +15,11 @@ export function Hero() {
   };
 
   const cityPhotos: Record<string, string> = {
-    Beijing: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400&h=400&fit=crop&auto=format",
-    Shanghai: "https://images.unsplash.com/photo-1537531383492-f81478b1d7a8?w=400&h=400&fit=crop&auto=format",
-    Chengdu: "https://images.unsplash.com/photo-1590736969955-71cc94901146?w=400&h=400&fit=crop&auto=format",
-    "Xi'an": "https://images.unsplash.com/photo-1590419684242-09ba3f5d8d8e?w=400&h=400&fit=crop&auto=format",
-    Guilin: "https://images.unsplash.com/photo-1529921876812-e58150e4f0b6?w=400&h=400&fit=crop&auto=format",
+    Beijing: "/beijing.jpg",
+    Shanghai: "/shanghai.jpg",
+    Chengdu: "/chengdu.jpg",
+    "Xi'an": "/xian.jpg",
+    Guilin: "/guilin.jpg",
   };
 
   return (
@@ -120,43 +121,20 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Popular destinations with card-style images */}
+        {/* Popular destinations — carousel */}
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs text-muted-foreground/50 font-medium mb-5 tracking-wider uppercase">
+          <p className="text-[11px] text-muted-foreground/40 font-medium mb-5 tracking-[0.15em] uppercase">
             Popular Destinations
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
-            {[
-              { name: "Beijing", emoji: "🏛️" },
-              { name: "Shanghai", emoji: "🌃" },
-              { name: "Chengdu", emoji: "🐼" },
-              { name: "Xi'an", emoji: "🏺" },
-              { name: "Guilin", emoji: "🏔️" },
-            ].map((city) => (
-              <button key={city.name} onClick={() => handleSubmit(`Trip to ${city.name}`)}
-                className="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all bg-white border border-border/60 hover:border-primary/20">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-warm/10" />
-                  <img
-                    src={cityPhotos[city.name]}
-                    alt={city.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                  {/* Emoji overlay */}
-                  <div className="absolute top-2 right-2 text-lg opacity-60">
-                    {city.emoji}
-                  </div>
-                </div>
-                <div className="p-2.5 text-center">
-                  <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {city.name}
-                  </span>
-                </div>
-              </button>
-            ))}
-          </div>
+          <DestinationCarousel
+            items={[
+              { name: "Beijing", image: cityPhotos.Beijing, onClick: () => handleSubmit("Trip to Beijing") },
+              { name: "Shanghai", image: cityPhotos.Shanghai, onClick: () => handleSubmit("Trip to Shanghai") },
+              { name: "Chengdu", image: cityPhotos.Chengdu, onClick: () => handleSubmit("Trip to Chengdu") },
+              { name: "Xi'an", image: cityPhotos["Xi'an"], onClick: () => handleSubmit("Trip to Xi'an") },
+              { name: "Guilin", image: cityPhotos.Guilin, onClick: () => handleSubmit("Trip to Guilin") },
+            ]}
+          />
         </div>
       </div>
     </section>
