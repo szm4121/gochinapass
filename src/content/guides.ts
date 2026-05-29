@@ -3,6 +3,7 @@ export interface GuideContent {
   title: string;
   subtitle: string;
   desc: string;
+  heroImage: string;
   seo: {
     title: string;
     description: string;
@@ -25,6 +26,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Payment Guide",
     subtitle: "How to use Alipay, WeChat Pay, and foreign cards in China",
     desc: "China is almost cashless. Here's how to pay for everything as a foreign tourist.",
+    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "How to Use Alipay in China 2025 | Foreign Tourist Payment Guide",
       description: "Complete guide to using Alipay and WeChat Pay as a foreign tourist in China. Link your international credit card, set up payments, and pay like a local.",
@@ -70,6 +72,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Transport Guide",
     subtitle: "Trains, subway, ride-hailing, and getting around China",
     desc: "China's transport system is world-class. Here's how to navigate it as a first-time visitor.",
+    heroImage: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "China Transport Guide 2025 | High-Speed Trains, Subway & Didi",
       description: "Complete guide to China's transport system for foreign tourists. How to book high-speed trains, use the subway, take Didi, and navigate like a local.",
@@ -115,6 +118,7 @@ export const guides: Record<string, GuideContent> = {
     title: "VPN & Internet Guide",
     subtitle: "How to access Google, WhatsApp, Instagram and more in China",
     desc: "The Great Firewall blocks many Western websites. Here's how to stay connected.",
+    heroImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "Best VPN for China 2025 | How to Access Google & WhatsApp",
       description: "The best VPNs that still work in China in 2025. Step-by-step guide to set up a VPN before your trip, access Google, WhatsApp, Instagram, and more.",
@@ -160,6 +164,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Essential Apps",
     subtitle: "Must-have apps for navigating, translating, and surviving China",
     desc: "The apps every foreign tourist needs for a smooth China trip.",
+    heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "Best Apps for China Travel 2025 | Essential Mobile Apps",
       description: "The essential apps for traveling in China — navigation, translation, messaging, ride-hailing, and more. What to download before your trip.",
@@ -205,6 +210,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Language Tips",
     subtitle: "Basic Chinese phrases and communication tools for travelers",
     desc: "You don't need to learn Chinese, but these phrases will make your trip much easier.",
+    heroImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "Basic Chinese Phrases for Travelers | China Language Guide",
       description: "Essential Chinese phrases for tourists visiting China. Learn key words for transportation, dining, shopping, and emergencies. Plus the best translation tools.",
@@ -246,6 +252,7 @@ export const guides: Record<string, GuideContent> = {
     title: "Health & Safety",
     subtitle: "Visa requirements, insurance, emergency contacts, and staying safe",
     desc: "China is one of the safest travel destinations. Here's what you need to know.",
+    heroImage: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=800&h=400&fit=crop&auto=format",
     seo: {
       title: "China Travel Safety Guide 2025 | Visas, Insurance & Emergency Info",
       description: "Complete safety guide for traveling in China. Visa requirements, travel insurance, emergency contacts, health tips, and staying safe as a foreign tourist.",

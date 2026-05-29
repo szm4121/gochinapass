@@ -34,9 +34,13 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       <Header />
       <main className="min-h-[calc(100vh-4rem)]">
         {/* Hero */}
-        <section className="relative overflow-hidden py-16 md:py-20 bg-gradient-to-br from-[#fffbf0] via-white to-[#fff5f0]">
+        <section className="relative overflow-hidden py-16 md:py-20">
+          <div className="absolute inset-0">
+            <img src={guide.heroImage} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "saturate(0.7) brightness(0.9)" }} />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#fffbf0]/80 via-white/75 to-[#fff5f0]/80" />
+          </div>
           <div className="max-w-[800px] mx-auto px-6 relative">
-            <Link href="/survival-guide" className="text-sm text-muted-foreground/60 hover:text-primary transition-colors mb-4 inline-flex items-center gap-1">
+            <Link href="/survival-guide" className="text-sm text-white/70 hover:text-white transition-colors mb-4 inline-flex items-center gap-1">
               ← Back to Survival Guide
             </Link>
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mt-4 mb-3">
